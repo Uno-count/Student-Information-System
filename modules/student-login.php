@@ -7,9 +7,14 @@ $password = $_POST['password'];
 
 // Connect to DB ($conn)
 include('dbConn.php');
+$cipher_method = 'AES-128-CTR';
+$option = 0;
+$decryption_iv = '7893475893479853';
+$decryption_key = 'univcalcitycrypt';
+$decrypted_password = openssl_encrypt($password, $cipher_method, $decryption_iv, $option, $decryption_key);
 
 // Query
-$sql = "SELECT * FROM tbl_student  WHERE studno = '" . $studno . "' AND password = '" . $password . "'";
+$sql = "SELECT * FROM tbl_student  WHERE studno = '" . $studno . "' AND password = '" . $decrypted_password . "'";
 $result = $conn->query($sql);
 
 

@@ -17,7 +17,6 @@ if (isset($_SESSION['studno'])) {
     </head>
 
     <body>
-
         <header>
             <img class="logo" src="../assets/image/ucc logo.png">
 
@@ -25,8 +24,8 @@ if (isset($_SESSION['studno'])) {
                 <ul class="nav_links">
                     <li><a href="./Student_index.php">HOME</a></li>
                     <li><a href="./Student_account.php">ACCOUNT</a></li>
-                    <li><a href="./Student_sched.php">SCHEDULE</a></li>
-                    <li><a class="activeForm" href="./Student_grades.php">GRADES</a></li>
+                    <li><a class="activeForm" href="./Student_sched.php">SCHEDULE</a></li>
+                    <li><a href="./Student_grades.php">GRADES</a></li>
                     <li><a href="./Student_enrollment.php">ENROLLMENT</a></li>
                 </ul>
             </nav>
@@ -43,15 +42,13 @@ if (isset($_SESSION['studno'])) {
                     <li class="options">
                         <img src="https://img.icons8.com/external-prettycons-lineal-prettycons/49/000000/external-exit-essentials-prettycons-lineal-prettycons.png" />
                         <a href="../student-logout.php">Log Out</a>
-
                     </li>
                 </ul>
             </div>
         </header>
-
-        <section class="grade-holder">
-            <h1>Grades</h1>
-            <div class="tabLe-container">
+        <section class="Sched-holder">
+            <h1>School Year 2021 - 2022 - First Semester</h1>
+            <div class="table-container">
                 <table class="table">
                     <thead>
                         <tr>
@@ -59,16 +56,17 @@ if (isset($_SESSION['studno'])) {
                             <th>Description</th>
                             <th>Units</th>
                             <th>Professor</th>
-                            <th>Grade</th>
+                            <th>Day</th>
+                            <th>Time</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td data-label="Subject Course">
-                                Computer Engineering 1
+                                Advanced Web Systems
                             </td>
                             <td data-label="Description">
-                                ComEng1
+                                CCS116
                             </td>
                             <td data-label="Units">
                                 5
@@ -76,122 +74,143 @@ if (isset($_SESSION['studno'])) {
                             <td data-label="Professor">
                                 Lorem ipsum dolor sit amet.
                             </td>
-                            <td data-label="Grade">
-                                1
+                            <td data-label="Day">
+                                Lorem ipsum dolor sit amet.
+                            </td>
+                            <td data-label="Time">
+                                Lorem ipsum dolor sit amet.
                             </td>
                         </tr>
                     </tbody>
                     <tbody>
                         <tr>
                             <td data-label="Subject Course">
-                                Computer Engineering 1
+                                Software Engineering 1
                             </td>
                             <td data-label="Description">
-                                ComEng1
+                                CS108
                             </td>
                             <td data-label="Units">
-                                5
+                                3
                             </td>
                             <td data-label="Professor">
                                 Lorem ipsum dolor sit amet.
                             </td>
-                            <td data-label="Grade">
-                                1
+                            <td data-label="Day">
+                                Lorem ipsum dolor sit amet.
+                            </td>
+                            <td data-label="Time">
+                                Lorem ipsum dolor sit amet.
                             </td>
                         </tr>
                     </tbody>
                     <tbody>
                         <tr>
                             <td data-label="Subject Course">
-                                Computer Engineering 1
+                                Networking and Communications
                             </td>
                             <td data-label="Description">
-                                ComEng1
+                                CS110
                             </td>
                             <td data-label="Units">
-                                5
+                                3
                             </td>
                             <td data-label="Professor">
                                 Lorem ipsum dolor sit amet.
                             </td>
-                            <td data-label="Grade">
-                                1
+                            <td data-label="Day">
+                                Lorem ipsum dolor sit amet.
+                            </td>
+                            <td data-label="Time">
+                                Lorem ipsum dolor sit amet.
                             </td>
                         </tr>
                     </tbody>
                     <tbody>
                         <tr>
                             <td data-label="Subject Course">
-                                Computer Engineering 1
+                                Graphics and Visual Computing
                             </td>
                             <td data-label="Description">
-                                ComEng1
+                                CSE102
                             </td>
                             <td data-label="Units">
-                                5
+                                3
                             </td>
                             <td data-label="Professor">
                                 Lorem ipsum dolor sit amet.
                             </td>
-                            <td data-label="Grade">
-                                1
+                            <td data-label="Day">
+                                Lorem ipsum dolor sit amet.
+                            </td>
+                            <td data-label="Time">
+                                Lorem ipsum dolor sit amet.
                             </td>
                         </tr>
                     </tbody>
                     <tbody>
                         <tr>
                             <td data-label="Subject Course">
-                                Computer Engineering 1
+                                Information Assurance and Security
                             </td>
                             <td data-label="Description">
-                                ComEng1
+                                CS113
                             </td>
                             <td data-label="Units">
-                                5
+                                3
                             </td>
                             <td data-label="Professor">
                                 Lorem ipsum dolor sit amet.
                             </td>
-                            <td data-label="Grade">
-                                1
+                            <td data-label="Day">
+                                Lorem ipsum dolor sit amet.
+                            </td>
+                            <td data-label="Time">
+                                Lorem ipsum dolor sit amet.
                             </td>
                         </tr>
                     </tbody>
                     <tbody>
                         <tr>
                             <td data-label="Subject Course">
-                                Computer Engineering 1
+                                Ethics
                             </td>
                             <td data-label="Description">
-                                ComEng1
+                                GEC008
                             </td>
                             <td data-label="Units">
-                                5
+                                3
                             </td>
                             <td data-label="Professor">
                                 Lorem ipsum dolor sit amet.
                             </td>
-                            <td data-label="Grade">
-                                1
+                            <td data-label="Day">
+                                Lorem ipsum dolor sit amet.
+                            </td>
+                            <td data-label="Time">
+                                Lorem ipsum dolor sit amet.
                             </td>
                         </tr>
                     </tbody>
                     <tbody>
                         <tr>
                             <td data-label="Subject Course">
-                                Computer Engineering 1
+                                Science,Technology and Society
                             </td>
                             <td data-label="Description">
-                                ComEng1
+                                GEC007
                             </td>
                             <td data-label="Units">
-                                5
+                                3
                             </td>
                             <td data-label="Professor">
                                 Lorem ipsum dolor sit amet.
                             </td>
-                            <td data-label="Grade">
-                                1
+                            <td data-label="Day">
+                                Lorem ipsum dolor sit amet.
+                            </td>
+                            <td data-label="Time">
+                                Lorem ipsum dolor sit amet.
                             </td>
                         </tr>
                     </tbody>
@@ -221,11 +240,11 @@ if (isset($_SESSION['studno'])) {
                 }
             }
         </script>
-    </body>
-<?php
+    <?php
 } else {
     header("location:login.php");
 }
-?>
+    ?>
+    </body>
 
     </html>

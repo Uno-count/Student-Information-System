@@ -1,5 +1,5 @@
 (function() {
-
+    
     var app = {
         initialize: function () {
             this.login.initialize();
@@ -22,6 +22,8 @@
                         retVal = "";
                         for (var i = 0, n = charset.length; i < length; ++i) {
                         retVal += charset.charAt(Math.floor(Math.random() * n));
+
+                        
                     }
                     jQuery('#txtGenerated').val(retVal);
                 });
@@ -76,8 +78,7 @@
                                 password : password,
                                 userType : userType,
                                 firstName : firstName,
-                                lastName : lastName,
-                               
+                                lastName : lastName
                             },
                             success: function(data) {
                                 if (data) {

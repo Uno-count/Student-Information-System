@@ -17,67 +17,71 @@
     if (isset($_SESSION['studno'])) {
     ?>
 
-        <nav>
-            <div class="nav-container">
-                <div class="logo">
-                    <img src="../assets/image/ucc logo.png" width="100px" alt="logo">
-                </div>
-                <div class="menu">
+        <header>
+            <img class="logo" src="../assets/image/ucc logo.png">
 
-                    <a href="./Student_index.php">Home</a>
-                    <a href="./Student_account.php">Account</a>
-                    <a href="./student schedule.php">Schedule</a>
-                    <a href="./Student_grades.php">Grades</a>
-                    <a href="./Student_enrollment.php">Enrollment</a>
+            <nav>
+                <ul class="nav_links">
+                    <li><a class="activeForm" href="./Student_index.php">HOME</a></li>
+                    <li><a href="./Student_account.php">ACCOUNT</a></li>
+                    <li><a href="./Student_schedule.php">SCHEDULE</a></li>
+                    <li><a href="./Student_grades.php">GRADES</a></li>
+                    <li><a href="./Student_enrollment.php">ENROLLMENT</a></li>
+                </ul>
+            </nav>
+            <div class="selector">
+                <div id="selectField">
+                    <p id="selectext">2019216</p>
+                    <img src="https://img.icons8.com/ios/50/ffffff/expand-arrow--v1.png" id="arrowIcon" />
                 </div>
-                <button class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </nav>
-        <nav class="mobile-nav">
-            <a href="index.php">Home</a>
-            <a href="account.php">Account</a>
-            <a href="schedule.php">Schedule</a>
-            <a href="grades.php">Grades</a>
-            <a href="enrollment.php">Enrollment</a>
-        </nav>
-        <section>
-            <div class="welcome">
-                <h1>Welcome,</h1>
-                <h1><?php if (isset($_SESSION['studno'])) {
+                <ul id="list" class="hide">
+                    <li class="options">
+                        <img src="https://img.icons8.com/dotty/80/000000/re-enter-pincode.png" />
+                        <a href="#">Change Password</a>
+                    </li>
+                    <li class="options">
+                        <img src="https://img.icons8.com/external-prettycons-lineal-prettycons/49/000000/external-exit-essentials-prettycons-lineal-prettycons.png" />
+                        <!-- <p <a href="../student-logout.php" Log out></p> -->
+                        <a href="../student-logout.php">Log Out</a>
 
-                        echo $_SESSION['studno'][2]; //firstname
-                        echo " ";
-                        echo $_SESSION['studno'][1]; //lastname
-                    }
-                    ?> </h1>
-                <p><?php if (isset($_SESSION['studno'])) {
-                        echo $_SESSION['studno'][0]; //student number
-                    }
-                    ?></p>
+                    </li>
+                </ul>
             </div>
-            <div class="inbox-card">
-                <div class="inbox-title"><i class="fas fa-inbox"></i>INBOX</div>
-                <div class="inbox-item1">
-                    <div class="date">September 29, 2021</div>
-                    <div class="message">OPENING OF CLASSES FOR THE 1ST SEMESTER, SY 2020-2021</div>
-                </div>
-                <div class="inbox-item2">
-                    <div class="date">September 30, 2021</div>
-                    <div class="message">UCCSIS Advisory: Changing of Password</div>
-                </div>
-                <div class="inbox-item3">
-                    <div class="date">October 1, 2021</div>
-                    <div class="message">OPENING OF CLASSES FOR THE 2ND SEMESTER, SY 2020-2021</div>
-                </div>
-                <div class="inbox-item4">
-                    <div class="date">October 2, 2021</div>
-                    <div class="message">UCCSIS Advisory: Changing of Password</div>
-                </div>
+        </header>
+
+        <div class="welcome">
+            <h1>Welcome,</h1>
+            <h1 class="stud-name"><?php if (isset($_SESSION['studno'])) {
+
+                                        echo $_SESSION['studno'][2]; //firstname
+                                        echo " ";
+                                        echo $_SESSION['studno'][1]; //lastname
+                                    }
+                                    ?> </h1>
+            <p class="stud-num"><?php if (isset($_SESSION['studno'])) {
+                                    echo $_SESSION['studno'][0]; //student number
+                                }
+                                ?></p>
+        </div>
+        <div class="inbox-card">
+            <div class="inbox-title"><i class="fas fa-inbox"></i>INBOX</div>
+            <div class="inbox-item1">
+                <div class="date">September 29, 2021</div>
+                <div class="message">OPENING OF CLASSES FOR THE 1ST SEMESTER, SY 2020-2021</div>
             </div>
+            <div class="inbox-item2">
+                <div class="date">September 30, 2021</div>
+                <div class="message">UCCSIS Advisory: Changing of Password</div>
+            </div>
+            <div class="inbox-item3">
+                <div class="date">October 1, 2021</div>
+                <div class="message">OPENING OF CLASSES FOR THE 2ND SEMESTER, SY 2020-2021</div>
+            </div>
+            <div class="inbox-item4">
+                <div class="date">October 2, 2021</div>
+                <div class="message">UCCSIS Advisory: Changing of Password</div>
+            </div>
+        </div>
         </section>
     <?php
     } else {
@@ -89,6 +93,25 @@
     </svg>
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+        var selectField = document.getElementById("selectField");
+        var selectext = document.getElementById("selectext");
+        var options = document.getElementsByClassName("options");
+        var list = document.getElementById("list");
+        var arrowIcon = document.getElementById("arrowIcon");
+
+        selectField.onclick = function() {
+            list.classList.toggle("hide");
+            arrowIcon.classList.toggle("rotate");
+        }
+
+        for (options of options) {
+            options.onclick = function() {
+                list.classList.toggle("hide");
+                arrowIcon.classList.toggle("rotate");
+            }
+        }
+    </script>
 </body>
 
 </html>
