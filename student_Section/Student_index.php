@@ -24,14 +24,18 @@
                 <ul class="nav_links">
                     <li><a class="activeForm" href="./Student_index.php">HOME</a></li>
                     <li><a href="./Student_account.php">ACCOUNT</a></li>
-                    <li><a href="./Student_schedule.php">SCHEDULE</a></li>
+                    <li><a href="./Student_sched.php">SCHEDULE</a></li>
                     <li><a href="./Student_grades.php">GRADES</a></li>
                     <li><a href="./Student_enrollment.php">ENROLLMENT</a></li>
                 </ul>
             </nav>
             <div class="selector">
                 <div id="selectField">
-                    <p id="selectext">2019216</p>
+                    <p class="select-text"><?php if (isset($_SESSION['studno'])) {
+                                                echo $_SESSION['studno'][0]; //student number
+
+                                            }
+                                            ?>-N</p>
                     <img src="https://img.icons8.com/ios/50/ffffff/expand-arrow--v1.png" id="arrowIcon" />
                 </div>
                 <ul id="list" class="hide">
@@ -42,7 +46,7 @@
                     <li class="options">
                         <img src="https://img.icons8.com/external-prettycons-lineal-prettycons/49/000000/external-exit-essentials-prettycons-lineal-prettycons.png" />
                         <!-- <p <a href="../student-logout.php" Log out></p> -->
-                        <a href="../student-logout.php">Log Out</a>
+                        <a href="student-logout.php">Log Out</a>
 
                     </li>
                 </ul>
@@ -54,14 +58,15 @@
             <h1 class="stud-name"><?php if (isset($_SESSION['studno'])) {
 
                                         echo $_SESSION['studno'][2]; //firstname
-                                        echo " ";
+                                        echo ", ";
                                         echo $_SESSION['studno'][1]; //lastname
                                     }
                                     ?> </h1>
             <p class="stud-num"><?php if (isset($_SESSION['studno'])) {
                                     echo $_SESSION['studno'][0]; //student number
+
                                 }
-                                ?></p>
+                                ?>-N</p>
         </div>
         <div class="inbox-card">
             <div class="inbox-title"><i class="fas fa-inbox"></i>INBOX</div>
