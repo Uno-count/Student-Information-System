@@ -92,7 +92,7 @@
             </div>
             <div class="col-xl-4 col-lg-12">
               <div class="card border-light mb-3">
-                <div class="card-header card-header-warning">
+                <div class="card-header card-header-info">
                   Enrolled
                 </div>
                 <div class="card-body info">
@@ -160,7 +160,7 @@
                   <p class="card-category">New Professor Today, <?php echo $today; ?></p>
                 </div>
                 <div class="card-body table-responsive">
-                  <table id="table-prof" class="table table-hover">
+                  <table id="table-container" class="table table-hover">
                     
                   </table>
                 </div>

@@ -4,7 +4,7 @@ $db=$conn;
 // fetch query
 function fetch_data(){
  global $db;
-  $query="SELECT *  FROM tbl_professor where DATE(dateInserted)=CURDATE()";
+  $query="SELECT * FROM tbl_subject";
   $exec=mysqli_query($db, $query);
   if(mysqli_num_rows($exec)>0){
     $row= mysqli_fetch_all($exec, MYSQLI_ASSOC);
@@ -14,19 +14,18 @@ function fetch_data(){
     return $row=[];
   }
 }
-
 $fetchData= fetch_data();
 show_data($fetchData);
 
-
 function show_data($fetchData){
- echo '
- <table border="1">
+ echo '<table border="1">
         <thead class="text-warning">
         <tr>
             <th>#</th>
-            <th>Name</th>
-            <th>Department</th>
+            <th>Code</th>
+            <th>Subject Description</th>
+            <th>Units</th>
+            <th>Action</th>
         </tr>
      </thead>';
 
@@ -39,8 +38,15 @@ function show_data($fetchData){
   echo "<tr>
 
           <td>".$sn."</td>
-          <td>".$data['lastname'] . " ".$data['firstname']. "</td>
-          <td>".$data['department'] . "</td>
+          <td>".$data['subcode'] . "</td>
+          <td>".$data['subdesc']."</td>
+          <td>".$data['subunits']."</td>
+          <td>
+          <a class='btn btn-success' data-toggle='modal' data-target='#staticBackdrop' id='update_modal<?php echo ".$data['id']."?>'><i class='fas fa-edit'></i></a>
+          <a class='btn btn-danger' href ='deleteStud.php?deleteStudents&id='".$data["id"]."><i class='far fa-trash-alt'></i></a>
+
+
+          </td>
    </tr>";
        
   $sn++; 
@@ -53,7 +59,5 @@ function show_data($fetchData){
 }
   echo "</table>";
 }
-
-
 
 ?>
