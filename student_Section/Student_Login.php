@@ -103,16 +103,17 @@
                                 <button type="submit" name="submit">Log In</button>
                             </form>
 
+
                         </div>
 
-                        <div class="login">
-                            <form>
+                        <!-- <div class="login">
+                            <form class="form" action="../modules/prof-login.php" method="post">
                                 <label for="chk" aria-hidden="true">PROFESSOR</label>
-                                <input type="email" name="studno" placeholder="Email" required="">
-                                <input type="password" name="password" placeholder="Password" id="password" required="">
-                                <button>Login</button>
+                                <input type="text" name="username" required="">
+                                <input type="password" name="password" id="password" required="">
+                                <button type="submit" name="submit">Log In</button>
                             </form>
-                        </div>
+                        </div> -->
                     </div>
 
                 </div>

@@ -40,25 +40,26 @@
                 </div>
                 <ul id="list" class="hide">
                     <li class="options">
+                        <a class="modal-btn" href="#">Change Password</a>
                         <img src="https://img.icons8.com/dotty/80/000000/re-enter-pincode.png" />
-                        <a href="#">Change Password</a>
+
                     </li>
                     <li class="options">
-                        <img src="https://img.icons8.com/external-prettycons-lineal-prettycons/49/000000/external-exit-essentials-prettycons-lineal-prettycons.png" />
                         <a href="student-logout.php">Log Out</a>
+                        <img src="https://img.icons8.com/external-prettycons-lineal-prettycons/49/000000/external-exit-essentials-prettycons-lineal-prettycons.png" />
+
 
                     </li>
                 </ul>
             </div>
+
         </header>
 
         <div class="welcome">
             <h1>Welcome,</h1>
             <h1 class="stud-name"><?php if (isset($_SESSION['studno'])) {
 
-                                        echo $_SESSION['studno'][2]; //firstname
-                                        echo ", ";
-                                        echo $_SESSION['studno'][1]; //lastname
+                                        echo $_SESSION['studno'][1]; //firstname
                                     }
                                     ?> </h1>
             <p class="stud-num"><?php if (isset($_SESSION['studno'])) {
@@ -98,6 +99,8 @@
     </div>
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script src="../assets/student css/modal.js"></script>
     <script>
         var selectField = document.getElementById("selectField");
         var selectext = document.getElementById("selectext");
@@ -117,6 +120,21 @@
             }
         }
     </script>
+    <!-- <div class="modal-bg">
+        <div class="modal">
+            <h2>Change Password</h2>
+            <label for="password">Previous Password:</label>
+            <input type="text" name="old">
+            <label for="password">New Password</label>
+            <input type="password" name="new">
+            <button class="save">Save</button>
+
+        </div>
+
+    </div> -->
+
+
+
 </body>
 
 </html>

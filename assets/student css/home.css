@@ -5,16 +5,12 @@
 
 /* // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { ... }
-
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px) { ... }
-
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) { ... }
-
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) { ... }
-
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... } */
 * {
@@ -38,7 +34,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	bottom: 0px;
-	z-index: -1;
+	z-index: -53;
 	position: absolute;
 }
 section {
@@ -182,7 +178,7 @@ a {
 	margin-bottom: -20px;
 }
 .welcome .stud-name {
-	font-size: 72px;
+	font-size: 60px;
 	font-family: "Raleway", sans-serif;
 	color: #e76f51;
 	font-weight: 900px;
@@ -355,6 +351,7 @@ section.Sched-holder {
 	box-shadow: 10px 10px 10px 10px rgba(64, 98, 80, 0.2);
 	border-top-right-radius: 2em;
 	border-top-left-radius: 2em;
+	z-index: -5;
 }
 
 section.Sched-holder h1 {
@@ -441,6 +438,7 @@ section.grade-holder {
 	box-shadow: 10px 10px 10px 10px rgba(64, 98, 80, 0.2);
 	border-top-right-radius: 2em;
 	border-top-left-radius: 2em;
+	z-index: -50;
 }
 .table-container {
 	margin-top: 3em;
@@ -510,6 +508,7 @@ section.grade-holder {
 	color: white;
 	grid-gap: 10px;
 	font-size: 20px;
+
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: 0.4fr 0.1fr 0.1fr 3fr;
 	grid-template-areas:

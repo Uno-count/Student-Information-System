@@ -67,157 +67,51 @@ if (isset($_SESSION['studno'])) {
                     <tbody>
                         <tr>
                             <td data-label="Subject Course">
-                                Advanced Web Systems
+                                <?php if (isset($_SESSION['studno'])) {
+                                    echo $_SESSION['studno'][11];
+                                }
+                                ?></p>
+
                             </td>
                             <td data-label="Description">
-                                CCS116
+                                <?php if (isset($_SESSION['studno'])) {
+                                    echo $_SESSION['studno'][10];
+                                }
+                                ?></p>
+
+
                             </td>
                             <td data-label="Units">
-                                5
+                                ---
                             </td>
                             <td data-label="Professor">
-                                Lorem ipsum dolor sit amet.
+                                <?php if (isset($_SESSION['studno'])) {
+                                    echo $_SESSION['studno'][12];
+                                }
+                                ?></p>
+
                             </td>
                             <td data-label="Day">
-                                Lorem ipsum dolor sit amet.
+                                <?php if (isset($_SESSION['studno'])) {
+                                    echo $_SESSION['studno'][13];
+                                }
+                                ?></p>
+
+
                             </td>
                             <td data-label="Time">
-                                Lorem ipsum dolor sit amet.
+                                <?php if (isset($_SESSION['studno'])) {
+                                    echo $_SESSION['studno'][14];
+                                    echo ("—");
+                                    echo $_SESSION['studno'][15];
+                                }
+                                ?></p>
+
+
                             </td>
                         </tr>
                     </tbody>
-                    <tbody>
-                        <tr>
-                            <td data-label="Subject Course">
-                                Software Engineering 1
-                            </td>
-                            <td data-label="Description">
-                                CS108
-                            </td>
-                            <td data-label="Units">
-                                3
-                            </td>
-                            <td data-label="Professor">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                            <td data-label="Day">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                            <td data-label="Time">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td data-label="Subject Course">
-                                Networking and Communications
-                            </td>
-                            <td data-label="Description">
-                                CS110
-                            </td>
-                            <td data-label="Units">
-                                3
-                            </td>
-                            <td data-label="Professor">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                            <td data-label="Day">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                            <td data-label="Time">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td data-label="Subject Course">
-                                Graphics and Visual Computing
-                            </td>
-                            <td data-label="Description">
-                                CSE102
-                            </td>
-                            <td data-label="Units">
-                                3
-                            </td>
-                            <td data-label="Professor">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                            <td data-label="Day">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                            <td data-label="Time">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td data-label="Subject Course">
-                                Information Assurance and Security
-                            </td>
-                            <td data-label="Description">
-                                CS113
-                            </td>
-                            <td data-label="Units">
-                                3
-                            </td>
-                            <td data-label="Professor">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                            <td data-label="Day">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                            <td data-label="Time">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td data-label="Subject Course">
-                                Ethics
-                            </td>
-                            <td data-label="Description">
-                                GEC008
-                            </td>
-                            <td data-label="Units">
-                                3
-                            </td>
-                            <td data-label="Professor">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                            <td data-label="Day">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                            <td data-label="Time">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td data-label="Subject Course">
-                                Science,Technology and Society
-                            </td>
-                            <td data-label="Description">
-                                GEC007
-                            </td>
-                            <td data-label="Units">
-                                3
-                            </td>
-                            <td data-label="Professor">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                            <td data-label="Day">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                            <td data-label="Time">
-                                Lorem ipsum dolor sit amet.
-                            </td>
-                        </tr>
-                    </tbody>
+
                 </table>
             </div>
         </section>
